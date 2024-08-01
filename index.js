@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const { DATABASE_URL } = require("./config");
 const cors = require("cors");
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 3000;
 
 const app = express();
 app.use(express.json());
@@ -51,6 +51,6 @@ app.get("/api/v1/data", async (req, res) => {
   }
 });
 
-app.listen(port, () => {
+app.listen(port,'0.0.0.0', () => {
   console.log("Server is running on port 3000");
 });
